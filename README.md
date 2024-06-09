@@ -11,4 +11,4 @@ Code Setup Instructions
 
 4. Run project_code.py, when running, the code will create another directory called outputs  
     a. In outputs, all plots will be generated and placed  
-    a. Report_outputs are plots that were generated when I(Saishrithik Sareddy) was running the code for the project
+    b. Report_outputs are plots that were generated when I(Saishrithik Sareddy) was running the code for the project
