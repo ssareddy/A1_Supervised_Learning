@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,6 +16,9 @@ class ModelRunner:
         self.label = label
         self.model = model
         self.CV = 5
+
+        if not os.path.exists('outputs'):
+            os.makedirs('outputs')
 
     def train(self, title, filename):
         # Start with learning curve
