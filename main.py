@@ -109,7 +109,7 @@ if __name__ == '__main__':
     diabetes = pd.read_csv('./dataset/diabetes_prediction_dataset.csv')
 
     # Preprocessing Diabetes dataset
-    diabetes['gender'] = diabetes['gender'].map({'Female': 1, 'Male': 0})
+    diabetes['gender'] = diabetes['gender'].map({'Female': 1, 'Male': 0, 'Other': 2})
     diabetes = diabetes.drop('smoking_history', axis=1)
     diabetes = diabetes.dropna()
 
@@ -121,7 +121,7 @@ if __name__ == '__main__':
     model = ModelRunner(features, classes, KNeighborsClassifier())
 
     print('Training Curve')
-    model.train('Learning Curve for KNN on Diabetes Dataset','Diabetes_Prediction_KNN_Learning_Curve')
+    model.train('Learning Curve for KNN on Diabetes Dataset', 'Diabetes_Prediction_KNN_Learning_Curve')
 
     print('Validation Curve for Leaf Size')
     model.validation('leaf_size', range(30, 80, 5), 'Diabetes_prediction_different_leaf_size')
